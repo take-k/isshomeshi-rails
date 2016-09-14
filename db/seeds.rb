@@ -5,3 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+users = User.create([
+  {
+    name:'タケダ',
+    email:"june.bure@gmail.com",
+    ienow:4,
+    image_url:"https://files.slack.com/files-pri/T02EQRUNZ-F2BDVLK4M/____________________________2016-09-14_14.52.16.png"
+  },
+  {
+    name:'クボ',
+    email:"j.com",
+    ienow:15,
+    image_url:"https://files.slack.com/files-pri/T02EQRUNZ-F2BDVLK4M/____________________________2016-09-14_14.52.16.png"
+  },
+  {
+    name:'ハラダ',
+    email:"fj.com",
+    ienow:3,
+    image_url:"https://files.slack.com/files-pri/T02EQRUNZ-F2BDVLK4M/____________________________2016-09-14_14.52.16.png"
+  },
+  {
+    name:'コモリ',
+    email:"fj.com",
+    ienow:0,
+    image_url:"https://files.slack.com/files-pri/T02EQRUNZ-F2BDVLK4M/____________________________2016-09-14_14.52.16.png"
+  }
+])
+
