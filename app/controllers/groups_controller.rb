@@ -14,7 +14,25 @@ class GroupsController < ApplicationController
 
   # GET /groups/new
   def new
-    @group = Group.new
+    group = Group.new
+    ["餃子","たこ焼き","鍋","お好み焼き","パスタ","カレー","丼ぶり","チャーハン","うどん"].each do |name|
+      cook = Cook.new
+      cook.name = name
+      cook.group = group
+      cook.good = 0
+      cook.save!
+    end
+    if params[:user_ids].present?
+      users = User.find(params[:user_ids])
+      users.each do |user|
+        user_group = UserGroup.new
+        user_group.user = user
+        user_group.group = group
+        user_group.name = user.name
+        user_group.image_url = user.image_url
+      end
+    end
+    @group = group
   end
 
   # GET /groups/1/edit
