@@ -40,6 +40,7 @@ class GroupsController < ApplicationController
         user_group.group = group
         user_group.name = user.name
         user_group.image_url = user.image_url
+        user_group.save!
       end
     end
 
