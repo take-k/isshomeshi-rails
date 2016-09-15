@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
   # POST /groups
   # POST /groups.json
   def create
-    group = Group.new
+    group = Group.new(group_params)
     ["餃子","たこ焼き","鍋","お好み焼き","パスタ","カレー","丼ぶり","チャーハン","うどん"].each do |name|
       cook = Cook.new
       cook.name = name
@@ -45,8 +45,6 @@ class GroupsController < ApplicationController
     end
 
     @group = group
-    @group = Group.new(group_params)
-
     respond_to do |format|
       if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully created.' }
