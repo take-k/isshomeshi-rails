@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cook.name %>
+</p>
+
+<p>
+  <strong>Good:</strong>
+  <%= @cook.good %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @cook.image_url %>
+</p>
+
+<p>
+  <strong>Link url:</strong>
+  <%= @cook.link_url %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @cook.group %>
+</p>
+
+<%= link_to 'Edit', edit_cook_path(@cook) %> |
+<%= link_to 'Back', cooks_path %>

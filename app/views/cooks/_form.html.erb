@@ -1,0 +1,42 @@
+<%= form_for(cook) do |f| %>
+  <% if cook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cook.errors.count, "error") %> prohibited this cook from being saved:</h2>
+
+      <ul>
+      <% cook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :good %>
+    <%= f.number_field :good %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link_url %>
+    <%= f.text_field :link_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :group_id %>
+    <%= f.text_field :group_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
