@@ -4,7 +4,11 @@ class CooksController < ApplicationController
   # GET /cooks
   # GET /cooks.json
   def index
-    @cooks = Cook.all
+    if params[:group_id]
+      @cooks = Cook.where("group_id = ?",params[:group_id])
+    else
+      @cooks = Cook.all
+    end
   end
 
   # GET /cooks/1
