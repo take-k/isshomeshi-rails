@@ -4,7 +4,14 @@ class UserGroupsController < ApplicationController
   # GET /user_groups
   # GET /user_groups.json
   def index
-    @user_groups = UserGroup.all
+    if params[:user_id]
+      @user_groups = UserGroup.where("user_id = ?",params[:user_id]).sort
+    elsif params[:group_id]
+      @user_groups = UserGroup.where("group_id = ?",params[:group_id]).sort
+    else
+      @user_groups = UserGroup.all
+    end
+
   end
 
   # GET /user_groups/1
