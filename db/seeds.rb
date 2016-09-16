@@ -11,7 +11,7 @@ users = User.create([
   {
     name:'タケダ',
     email:"june.bure@gmail.com",
-    ienow:4,
+    ienow:1,
     image_url:"https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-1/p160x160/13901410_768682063271850_6644402495274992449_n.jpg?oh=5c0c676a9be65c98cdf04d4fd87dd3b3&oe=5885E47D"
   },
   {
@@ -23,7 +23,7 @@ users = User.create([
   {
     name:'コムロ',
     email:"fj.com",
-    ienow:3,
+    ienow:1,
     image_url:"https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/11048609_775499519194895_4996134180698860846_n.jpg?oh=136337d8787db05d3c80fb827a908609&oe=583AA417"
   },
   {
@@ -35,6 +35,13 @@ users = User.create([
 {
     name:'ハルタ',
     email:"fdsfds",
-    ienow:2,
+    ienow:3,
     image_url:"https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/13466145_1743950642553670_6906358216286959188_n.jpg?oh=b01e1481b4a7c66040cb091fe8a69609&oe=583E2313"
-}])
+},
+  {
+    name:'ヤマダ',
+    email:"fdsfds",
+    ienow:1,
+    image_url:"https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-1/c256.78.320.320/945312_313006322164977_515217662_n.jpg?oh=d2ed5efc105d93d35a75c2b63e9dd79e&oe=586D55A8"
+  }
+])
