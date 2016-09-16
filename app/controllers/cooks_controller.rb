@@ -5,7 +5,7 @@ class CooksController < ApplicationController
   # GET /cooks.json
   def index
     if params[:group_id]
-      @cooks = Cook.where("group_id = ?",params[:group_id])
+      @cooks = Cook.where("group_id = ?",params[:group_id]).sort
     else
       @cooks = Cook.all
     end
