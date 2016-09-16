@@ -11,7 +11,6 @@ class UserGroupsController < ApplicationController
     else
       @user_groups = UserGroup.all
     end
-
   end
 
   # GET /user_groups/1
