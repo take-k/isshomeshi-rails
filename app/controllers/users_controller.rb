@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all.sort
+    @users = User.order "ienow DESC"
   end
 
   # GET /users/1
@@ -24,8 +24,10 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
-
+    if params[:name].present?
+      @user = User.find_by name:params[:name]
+    end
+    @user = User.new(user_params) if @user == nil
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
