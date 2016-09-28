@@ -4,7 +4,11 @@ class NotificationsController < ApplicationController
   # GET /notifications
   # GET /notifications.json
   def index
-    @notifications = Notification.all
+    if params[:user_id]
+      @notifications = Notification.where("receiver_id = ?",params[:user_id]).sort
+    else
+      @notifications = Notification.all
+    end
   end
 
   # GET /notifications/1
