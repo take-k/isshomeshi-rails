@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notifications
   resources :cooks
   resources :user_groups
   resources :groups
